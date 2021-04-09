@@ -1,0 +1,75 @@
+@import "config";
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 1;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 570px;
+    padding-right: 10px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 900px;
+    }
+  }
+
+  &__logo {
+    width: 4.5rem;
+    margin: 10px;
+    margin-left: 25px;
+
+    @media screen and (min-width: $ipad) {
+      width: 5rem;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 2rem;
+    cursor: pointer;
+    text-align: right;
+    @media screen and (min-width: $ipad) {
+      margin-left: 3rem;
+    }
+  }
+
+  &__item::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 50%;
+    bottom: -4px;
+    transition: 0.3s;
+  }
+
+  &__item:hover::before {
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 0 2px 1px cyan;
+    left: 0;
+  }
+}

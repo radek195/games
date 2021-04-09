@@ -1,0 +1,105 @@
+@import "config";
+
+.result {
+  padding: 26px;
+
+  &__wrapper {
+    max-width: 570px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $wrapper-desktop;
+      padding: 0 25px;
+      flex-direction: row;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__card {
+    color: $font-bright;
+    text-decoration: none;
+    border: 6px solid $dark-shade;
+    max-width: 200px;
+    border-radius: 20px;
+    background-color: rgb(4, 150, 150);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: $dark-shade;
+    cursor: pointer;
+    @include box-shadow(2px, $dark-shade);
+    transition: 0.2s;
+    &:hover {
+      background-color: rgba(black, 0.5);
+      box-shadow: none;
+    }
+
+    &:hover > img {
+      transform: scale(1.1);
+    }
+    @media screen and (min-width: $ipad) {
+      max-width: 240px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 260px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    transition: 0.2s;
+  }
+
+  &__content {
+    position: relative;
+    padding: 16px;
+    padding-bottom: 32px;
+    height: 100%;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  &__developer {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    margin: 7px 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &__category {
+    position: absolute;
+    bottom: 16px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    align-self: flex-end;
+  }
+
+  &__panel {
+    margin-bottom: 20px;
+  }
+}

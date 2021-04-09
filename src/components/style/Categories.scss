@@ -1,0 +1,64 @@
+@import "config";
+
+.categories {
+  padding: 26px;
+
+  &__wrapper {
+    max-width: 570px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $wrapper-desktop;
+      padding: 0 25px;
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__item {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 4px 5px;
+    margin: 7px 4px;
+    min-width: 55px;
+    color: $font-dark;
+    background-color: rgba($bcg-bright, 0.5);
+    @include box-shadow(2px, $dark-shade);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    @media screen and (min-width: $ipad) {
+      margin: 8px;
+      min-width: 85px;
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgba($bcg-purple, 0.75);
+      color: $font-bright;
+    }
+
+    &--active {
+      background-color: $bcg-purple;
+      box-shadow: none;
+      color: $font-bright;
+    }
+  }
+}

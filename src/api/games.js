@@ -7,15 +7,3 @@ export default axios.create({
     "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
   },
 });
-
-// const getData = async () => {
-//   const { data } = await games.get("/games", {
-//     params: {
-//       platform: null,
-//       tag: "shooter",
-//       id: null,
-//     },
-//   });
-
-//   console.log(data);
-// };

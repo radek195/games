@@ -1,0 +1,26 @@
+@import "config";
+
+$box-size: 2px;
+
+.btn {
+  position: relative;
+  background: linear-gradient(135deg, $bcg-purple 30%, $bcg-blue 80%, cyan);
+  color: $font-bright;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem 2.3rem;
+  border-radius: 1.8rem;
+  border: none;
+  outline: none;
+  transition: 0.1s;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  @include box-shadow($box-size, $dark-shade);
+
+  &--clicked {
+    transform: translate($box-size, $box-size);
+    @include box-shadow($box-size, transparent);
+  }
+}

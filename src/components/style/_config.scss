@@ -1,0 +1,54 @@
+//background colors
+$bcg-purple: #6930c3;
+$bcg-blue: #2f80f8;
+$bcg-dark: #0d0f0f;
+$bcg-bright: #fdffff;
+
+//accents
+$accent-dark: #101414;
+$accent-bright: #e9f5ff;
+
+//font colors
+$font-bright: #f7feff;
+$font-dark: #38353a;
+
+//shade
+$dark-shade: rgba(0, 0, 0, 0.3);
+$bright-shade: rgba(255, 255, 255, 0.6);
+
+//breakpoints
+$ip6: 375px;
+$ipad: 768px;
+$desktop: 1025px;
+
+//reset
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$wrapper-desktop: 900px;
+
+:root {
+  font-size: 9px;
+  font-family: "Lexend", sans-serif;
+  color: $font-bright;
+
+  @media screen and (min-width: $ip6) {
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: $ipad) {
+    font-size: 11px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+  }
+}
+
+@mixin box-shadow($size, $color) {
+  box-shadow: $size $size $size $size $color;
+}

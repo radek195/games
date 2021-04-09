@@ -1,0 +1,74 @@
+@import "config";
+
+.about {
+  padding: 50px 26px;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 570px;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $wrapper-desktop;
+      padding: 0 25px;
+      flex-direction: row;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 570px;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $wrapper-desktop;
+      flex-direction: row;
+    }
+  }
+  &__description {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &__text {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 10px auto;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 1100px;
+      flex-direction: row;
+      margin: 25px;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 0.4rem;
+    position: relative;
+    filter: contrast(75%);
+
+    @media screen and (min-width: $desktop) {
+      width: 50%;
+    }
+  }
+}

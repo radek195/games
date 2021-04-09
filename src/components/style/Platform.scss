@@ -1,0 +1,87 @@
+@import "config";
+
+.platform {
+  padding: 26px;
+
+  &__wrapper {
+    max-width: 570px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: $wrapper-desktop;
+      padding: 0 25px;
+      flex-direction: row;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media screen and (min-width: $ipad) {
+      flex-flow: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    width: 70%;
+    max-width: 140px;
+    @include box-shadow(2px, $dark-shade);
+    background-color: rgba($bcg-bright, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 11px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    @media screen and (min-width: $ipad) {
+      max-width: 190px;
+      padding: 25px;
+    }
+    @media screen and (min-width: $desktop) {
+      max-width: 220px;
+    }
+    &:hover {
+      background-color: rgba($bcg-bright, 0.6);
+      box-shadow: none;
+      filter: contrast(180%);
+    }
+
+    &--active {
+      transform: scale(1.08);
+      background-color: rgba($bcg-bright, 0.6);
+      color: $font-bright;
+      box-shadow: none;
+      filter: contrast(180%);
+    }
+  }
+
+  &__icon {
+    font-size: 5rem;
+
+    @media screen and (min-width: $ipad) {
+      font-size: 6rem;
+    }
+  }
+
+  &__name {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-top: 8px;
+    color: $font-dark;
+  }
+}
