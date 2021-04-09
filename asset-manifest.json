@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/games/static/css/main.c86c64ca.chunk.css",
+    "main.js": "/games/static/js/main.5987d199.chunk.js",
+    "main.js.map": "/games/static/js/main.5987d199.chunk.js.map",
+    "runtime-main.js": "/games/static/js/runtime-main.d5abd473.js",
+    "runtime-main.js.map": "/games/static/js/runtime-main.d5abd473.js.map",
+    "static/js/2.b5b9c836.chunk.js": "/games/static/js/2.b5b9c836.chunk.js",
+    "static/js/2.b5b9c836.chunk.js.map": "/games/static/js/2.b5b9c836.chunk.js.map",
+    "index.html": "/games/index.html",
+    "static/css/main.c86c64ca.chunk.css.map": "/games/static/css/main.c86c64ca.chunk.css.map",
+    "static/js/2.b5b9c836.chunk.js.LICENSE.txt": "/games/static/js/2.b5b9c836.chunk.js.LICENSE.txt",
+    "static/media/Hero.scss": "/games/static/media/game.257e0794.jpg",
+    "static/media/playstation.4d75bf23.jpg": "/games/static/media/playstation.4d75bf23.jpg",
+    "static/media/App.scss": "/games/static/media/xbox.af4c0de1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5abd473.js",
+    "static/js/2.b5b9c836.chunk.js",
+    "static/css/main.c86c64ca.chunk.css",
+    "static/js/main.5987d199.chunk.js"
+  ]
+}
