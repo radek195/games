@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import games from "../api/Games";
+import games from "../api/games";
 import Button from "./Button";
 import "./style/Result.scss";
 
-const Result = ({ categories, platform }) => {
+const Result = ({ categories, platform, random, setRand }) => {
   const [results, setResults] = useState([]);
 
   const filterResults = (results) => {
@@ -13,7 +13,14 @@ const Result = ({ categories, platform }) => {
       );
     });
   };
-
+  useEffect(() => {
+    if (random) {
+      getResults();
+    }
+    return () => {
+      setRand(false);
+    };
+  }, [random]);
   const getResults = async () => {
     const { data } = await games.get("/games", {
       params: {
@@ -21,9 +28,14 @@ const Result = ({ categories, platform }) => {
         tag: { ...categories },
       },
     });
-    let filtered = filterResults(data);
 
-    setResults(filtered);
+    if (random) {
+      let rand = Math.floor(Math.random() * data.length);
+
+      setResults([data[rand]]);
+    } else {
+      setResults(filterResults(data));
+    }
   };
   const renderedResults = results.map(
     ({
@@ -53,7 +65,7 @@ const Result = ({ categories, platform }) => {
     }
   );
   return (
-    <section className="result">
+    <section className="result" id="result">
       <div className="result__wrapper">
         <h3 className="result__title">
           <i className="far fa-window-restore"></i> .results

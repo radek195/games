@@ -15,7 +15,7 @@ const platforms = [
   },
 ];
 
-const Platform = ({ setPlatform }) => {
+const Platform = ({ setPlatform, setRand }) => {
   const [selected, setSelected] = useState(null);
 
   const renderedPlatforms = platforms.map((platform, index) => {
@@ -28,6 +28,7 @@ const Platform = ({ setPlatform }) => {
         }`}
         key={index}
         onClick={() => {
+          setRand(false);
           setSelected(platform.name.toLowerCase());
         }}
       >

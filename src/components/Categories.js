@@ -17,7 +17,7 @@ const categories = [
   "action rpg",
 ];
 
-const Categories = ({ setCategories }) => {
+const Categories = ({ setCategories, setRand }) => {
   const [selected, setSelected] = useState([]);
 
   const clickHandle = (category) => {
@@ -44,6 +44,7 @@ const Categories = ({ setCategories }) => {
         }
         key={index}
         onClick={() => {
+          setRand(false);
           clickHandle(category);
         }}
       >

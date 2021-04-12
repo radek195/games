@@ -4,7 +4,7 @@ import "./style/Navbar.scss";
 
 import logo from "../assets/logo/logo-bright.png";
 
-const Navbar = () => {
+const Navbar = ({ setRand }) => {
   return (
     <nav className="nav">
       <div className="nav__wrapper">
@@ -23,14 +23,21 @@ const Navbar = () => {
               Start!
             </Link>
           </li>
-          <li className="nav__item">
+          <li
+            className="nav__item"
+            onClick={() => {
+              setRand(true);
+            }}
+          >
             <Link
               activeClass="active"
-              to="roll"
+              to="result"
               spy={true}
               smooth={true}
-              offset={-70}
               duration={500}
+              onClick={() => {
+                setRand(true);
+              }}
             >
               Dice Roll!
             </Link>

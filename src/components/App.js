@@ -12,16 +12,21 @@ import Result from "./Result";
 const App = () => {
   const [categories, setCategories] = useState();
   const [platform, setPlatform] = useState();
-
+  const [rand, setRand] = useState(false);
   return (
     <div className="app">
-      <Navbar />
+      <Navbar setRand={setRand} />
       <Hero />
       <main className="app__main">
         <About />
-        <Categories setCategories={setCategories} />
-        <Platform setPlatform={setPlatform} />
-        <Result categories={categories} platform={platform} />
+        <Categories setCategories={setCategories} setRand={setRand} />
+        <Platform setPlatform={setPlatform} setRand={setRand} />
+        <Result
+          categories={categories}
+          platform={platform}
+          setRand={setRand}
+          random={rand}
+        />
       </main>
     </div>
   );
