@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="hero">
       <header className="hero__header">
         <h1 className="hero__maintitle hero__title">Gamebrary</h1>
-        <h2 className="hero__subtitle hero__title">Best video game browser!</h2>
+        <h2 className="hero__subtitle hero__title">Best video-game browser!</h2>
       </header>
       <div className="hero__btn">
         <Link
